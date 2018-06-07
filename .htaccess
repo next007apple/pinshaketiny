@@ -1,0 +1,14 @@
+Options -Indexes
+
+ErrorDocument 404 /
+ErrorDocument 403 /
+
+<FilesMatch ".csv*">
+    Order Allow,Deny
+    Deny from All
+</FilesMatch>
+
+<FilesMatch "\.(htaccess|jpe?g|pdf|bmp|png|html|css)$">
+    Order allow,deny
+    allow from all
+</FilesMatch>

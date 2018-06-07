@@ -1,0 +1,1 @@
+<?php require_once('../app/temp/function.php'); temp1(); ?>

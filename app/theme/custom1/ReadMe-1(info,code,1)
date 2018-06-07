@@ -1,0 +1,9 @@
+(@@connect,google spreadsheet,json,php)
+$gssurl = 'https://spreadsheets.google.com/feeds/list/{%GoogleSpreadsheetID%}/1/public/values?alt=json';
+$gssfile= file_get_contents($gssurl);
+$gssjson = json_decode($gssfile);
+$gssrows = $gssjson->{'feed'}->{'entry'};
+
+foreach($gssrows as $row){
+$sn = $row->{'gsx$sn'}->{'$t'};
+}
